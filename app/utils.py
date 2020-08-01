@@ -13,4 +13,4 @@ def create_repr(obj: Any, attrs: Optional[Sequence[str]] = None):
     return f"{obj.__class__.__qualname__}({attrs_repr})"
 
 def calculate_coordinates(id, x0, y0):
-    return x0 + (id%10)*100 - 450, y0 - (id // 10) * 100 - 100
+    return x0 + (id%10)*80 - 350, y0 - (id // 10) * 80 - 80
