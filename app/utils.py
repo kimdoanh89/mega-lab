@@ -11,3 +11,6 @@ def create_repr(obj: Any, attrs: Optional[Sequence[str]] = None):
             attrs_kv.append(f"{attr}={attr_value!r}")
     attrs_repr = ", ".join(attrs_kv)
     return f"{obj.__class__.__qualname__}({attrs_repr})"
+
+def calculate_coordinates(id, x0, y0):
+    return x0 + (id%10)*100 - 450, y0 - (id // 10) * 100 - 100
