@@ -26,10 +26,10 @@ async def main():
         for i, node in enumerate(nodes_data):
             if node["name"] == group[k]:
                 print("{} coordinates: {} {}".format(group[k], node["x"], node["y"]))
-                x3, y3,  node_id_sw3 = node["x"], node["y"], node["node_id"]
+                x_sw, y_sw,  node_id_sw = node["x"], node["y"], node["node_id"]
                 for i in range(0, 50):
-                    node_id_router = GNS3Project.add_router(k, i, x3, y3)
-                    GNS3Project.add_link(i, node_id_sw3, node_id_router)
+                    node_id_router = GNS3Project.add_router(k, i, x_sw, y_sw)
+                    GNS3Project.add_link(i, node_id_sw, node_id_router)
     breakpoint()
     # TODO: Add asyncio context manager
 
