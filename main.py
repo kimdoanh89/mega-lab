@@ -21,7 +21,7 @@ async def main():
     # await generate_dhcp_config()
     nodes_data = await GNS3Project.fetch_from_id(PROJECT_ID)
     # group = ["Switch1", "Switch2", "Switch3", "Switch4"]
-    group = ["Switch1", "Switch2"]
+    group = ["Switch3", "Switch4"]
     for k in range(len(group)):
         for i, node in enumerate(nodes_data):
             if node["name"] == group[k]:
